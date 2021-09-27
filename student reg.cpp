@@ -16,7 +16,7 @@ int main()
 	string empty = "00";
 	string proctor = "";
 	// Name of the file in which DB is stored.
-	ifstream f("Example.txt");
+	ifstream f("databaseStudent.txt");
 	string line;
 
 	// The following for loop counts the total number of
@@ -28,11 +28,11 @@ int main()
 	while (option != 6) {
 		// This prints out all the available options in the
 		// DB
-		cout << "\nAvailable operations: \n1. Add New "
-				"Students\n2."
-			<< "Student Login\n3. Faculty Login\n4. "
-				"Proctor Login\n5. Admin View\n"
-			<< "6. Exit\nEnter option: ";
+		 cout << "\nAvailable operations: \n1. Add New "
+                "Students\n2."
+             << "Student Login\n3. Faculty Login\n4. "
+                "Proctor Login\n5. Admin View\n"
+             << "6. Exit\nEnter option: ";
 		cin >> option;
 
 		if (option == 1) {
@@ -43,7 +43,7 @@ int main()
 
 			for (int i = 0; i < n; i++) {
 				ofstream outfile;
-				outfile.open("Example.txt", ios::app);
+				outfile.open("databaseStudent.txt", ios::app);
 				// The entire data of a single student is
 				// stored line-by-line.
 				cout << "Enter your registration number: ";
@@ -266,7 +266,7 @@ int main()
 						"ID"
 					<< endl;
 				ifstream infile;
-				infile.open("Example.txt", ios::in);
+				infile.open("databaseStudent.txt", ios::in);
 				char data[20];
 
 				while (infile >> data) {
